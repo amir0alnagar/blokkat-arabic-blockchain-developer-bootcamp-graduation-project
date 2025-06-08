@@ -7,6 +7,7 @@ import Voting from "./pages/Voting";
 import Results from "./pages/Results";
 import Withdraw from "./pages/Withdraw";
 import Dashboard from "./pages/Dashboard";
+import { RequireOwner } from "./components/RequireOwner";
 
 function App() {
   return (
@@ -14,11 +15,18 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/dashboard"
+            element={
+              <RequireOwner>
+                <Dashboard />
+              </RequireOwner>
+            }
+          />
           <Route path="/deposite" element={<Deposite />} />
           <Route path="/voting" element={<Voting />} />
           <Route path="/results" element={<Results />} />
-          <Route path="withdraw" element={<Withdraw />} />
+          <Route path="/withdraw" element={<Withdraw />} />
         </Routes>
       </Layout>
     </BrowserRouter>

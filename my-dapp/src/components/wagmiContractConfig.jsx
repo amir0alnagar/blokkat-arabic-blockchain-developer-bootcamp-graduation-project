@@ -1,5 +1,5 @@
 const wagmiContractConfig = {
-  address: "0x4233646A5a504aa24A3E7aff263D3245f6e65B70",
+  address: "0xc7d94c575A1D8bf9715cF0a624Ee3dC8eb99Ce76",
   abi: [
     {
       inputs: [
@@ -193,6 +193,19 @@ const wagmiContractConfig = {
     },
     {
       inputs: [],
+      name: "deadline",
+      outputs: [
+        {
+          internalType: "uint256",
+          name: "",
+          type: "uint256",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [],
       name: "deposit",
       outputs: [],
       stateMutability: "payable",
@@ -252,6 +265,19 @@ const wagmiContractConfig = {
         },
       ],
       name: "hasVoted",
+      outputs: [
+        {
+          internalType: "bool",
+          name: "",
+          type: "bool",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [],
+      name: "isPaused",
       outputs: [
         {
           internalType: "bool",

@@ -17,8 +17,8 @@ contract Voting is Ownable {
 
     string[] public candidateNames;
     uint256 public totalCandidates;
-    bool isPaused;
-    uint256 deadline;
+    bool public isPaused;
+    uint256 public deadline;
 
     struct CandidatesVotes {
         string candidate;
@@ -62,7 +62,7 @@ contract Voting is Ownable {
     function vote(string memory _name) public votingIsAvailable {
         require(!hasVoted[msg.sender], "You have already voted");
         require(candidateExists[_name], "Candidate does not exist");
-
+        require(balances[msg.sender] >= 0.01 ether, "You must deposit first");
         uint256 power = votePower();
         votesPerCandidate[_name] += power;
         hasVoted[msg.sender] = true;
@@ -94,7 +94,7 @@ contract Voting is Ownable {
         emit Pause();
     }
 
-    function withdraw() public  {
+    function withdraw() public {
         require(isPaused, "Voting is not over yet");
         uint256 amount = balances[msg.sender];
         balances[msg.sender] = 0;

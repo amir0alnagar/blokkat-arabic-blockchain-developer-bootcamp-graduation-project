@@ -1,7 +1,6 @@
 import { useReadContract } from "wagmi";
 import wagmiContractConfig from "../components/wagmiContractConfig";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Button from "../components/Button";
 
 const Results = () => {
@@ -29,9 +28,8 @@ const Results = () => {
     };
     fetchResults();
   }, [refetch]);
-  
 
-   console.log(results[0]);
+  console.log(results[0]);
 
   return (
     <div className="container text-center w-full items-start">
@@ -60,7 +58,7 @@ const Results = () => {
         <div className=" text-3xl">nothing to show</div>
       )}
       <div className="w-full flex justify-center gap-x-20">
-        <Button path="" text="Go To Home " />
+        <Button path="" text="Go To Home" />
         <Button path="voting" text="Return to Vote" />
         <Button path="withdraw" text="withdraw" />
       </div>

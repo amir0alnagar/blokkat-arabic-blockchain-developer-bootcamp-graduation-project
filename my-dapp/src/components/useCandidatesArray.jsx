@@ -1,5 +1,5 @@
 import { useReadContract } from "wagmi";
-import wagmiContractConfig from "./wagmiContractConfig";
+import wagmiContractConfig from "./logic/wagmiContractConfig";
 import { useEffect, useState } from "react";
 
 const useCandidatesArray = () => {
@@ -23,18 +23,7 @@ const useCandidatesArray = () => {
       fetchCandidates();
     }, [refetch]);
     return candidates;
-/*
-    try {
-        const result = refetch();
-        if (result?.data) {
-          setCandidates(result.data);
-        }
-        console.log(candidates);
-      } catch (err) {
-        console.log(err);
-      }
-    return candidates;
-    */
+
 };
     
 
