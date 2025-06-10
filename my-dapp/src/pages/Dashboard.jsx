@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import wagmiContractConfig from "../components/wagmiContractConfig";
 import { useWriteContract } from "wagmi";
 import Button from "../components/Button";
-import AlertMessage from "../components/AlertMessage"; // لازم يكون عندك هذا المكون
+import AlertMessage from "../components/AlertMessage"; 
 
 const Dashboard = () => {
   const [candidate, setCandidate] = useState("");
@@ -20,7 +20,7 @@ const Dashboard = () => {
       return;
     }
     try {
-      setAlert({ type: "", message: "" }); // مسح التنبيه قبل التنفيذ
+      setAlert({ type: "", message: "" }); 
       const _tx = await writeContract({
         ...wagmiContractConfig,
         functionName: "createCandidate",
@@ -54,7 +54,7 @@ const Dashboard = () => {
           value={candidate}
           onChange={(e) => {
             setCandidate(e.target.value);
-            if (alert.message) setAlert({ type: "", message: "" }); // مسح التنبيه لما يكتب المستخدم
+            if (alert.message) setAlert({ type: "", message: "" }); 
           }}
         />
       </form>

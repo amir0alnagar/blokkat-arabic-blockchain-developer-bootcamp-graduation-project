@@ -3,7 +3,7 @@ import { useAccount } from "wagmi";
 
 const Hero = () => {
   const { address } = useAccount();
-  const owner = "0x995a9551E90E4Efc8fF755A529eCE1fF4a710126";
+  const owner = import.meta.env.VITE_CONTRACT_OWNER;
     return (
       <div className="container text-center ">
         <div className="text-6xl mb-10 text-[#1E3A8A]">
@@ -16,10 +16,10 @@ const Hero = () => {
         </div>
         <div>
           {address === owner ? (
-            <button className="w-65 h-15 bg-[#1E3A8A] text-4xl text-[#FFFFFF] mt-10 cursor-pointer in-hover:[#374151]  rounded-2xl">
+            <button className="w-65 h-15 bg-[#1E3A8A] text-4xl text-[#FFFFFF] mt-10 cursor-pointer in-hover:[#374151] rounded-2xl">
               <Link to="/dashboard">Add candidates</Link>
             </button>) : null}
-        <button className="w-65 h-15 mx-3 bg-[#1E3A8A] text-4xl text-[#FFFFFF] mt-10 cursor-pointer in-hover:[#374151]  rounded-2xl">
+        <button className="w-65 h-15 mx-3 bg-[#1E3A8A] text-4xl text-[#FFFFFF] mt-10 cursor-pointer in-hover:[#374151] rounded-2xl">
           <Link to="/deposite">Deposit</Link>
         </button>
         </div>

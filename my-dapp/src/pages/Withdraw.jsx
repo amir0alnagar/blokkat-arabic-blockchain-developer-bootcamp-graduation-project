@@ -71,7 +71,7 @@ const Withdraw = () => {
 
       <div className="text-6xl text-[#1E3A8A]">Withdraw</div>
       <div className="text-2xl mt-2 text-gray-600">
-        ⏰ Voting ends at: <strong>{formattedDeadline}</strong>{" "}
+        ⏰ Voting ends at: <strong>{formattedDeadline}</strong>
       </div>
       <div className="text-4xl m-7 text-[#374151]">
         Once the voting is over, you can withdraw your funds from your account

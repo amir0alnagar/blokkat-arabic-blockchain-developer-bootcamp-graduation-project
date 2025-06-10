@@ -1,0 +1,81 @@
+amirelnagar@Amir:/mnt/e/BlockChain/Blokkat/graduation-project/web3$ forge script script/Voting.s.sol:DeployVoting --rpc-url $RPC_URL --broadcast
+[⠰] Compiling...
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  Voting Contract deployed at: 0x96CfEb6D511270aa0cfF5cb8d68AdB26F92fd8fe
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 534351
+
+Estimated gas price: 0.0313601 gwei
+
+Estimated total gas used for script: 2645719
+
+Estimated amount required: 0.0000829700124119 ETH
+
+==========================
+
+##### scroll-sepolia
+✅  [Success] Hash: 0x5bc152a4c313f74fbf92fbf4c4dfedfdd66c2e45e35e7d36f90522281c1c2d44
+Contract Address: 0x96CfEb6D511270aa0cfF5cb8d68AdB26F92fd8fe
+Block: 10455354
+Paid: 0.0000319116534369 ETH (2035169 gas * 0.0156801 gwei)
+
+✅ Sequence #1 on scroll-sepolia | Total Paid: 0.0000319116534369 ETH (2035169 gas * avg 0.0156801 gwei)
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /mnt/e/BlockChain/Blokkat/graduation-project/web3/broadcast/Voting.s.sol/534351/run-latest.json
+
+Sensitive values saved to: /mnt/e/BlockChain/Blokkat/graduation-project/web3/cache/Voting.s.sol/534351/run-latest.json
+
+amirelnagar@Amir:/mnt/e/BlockChain/Blokkat/graduation-project/web3$ forge script script/Voting.s.sol:DeployVoting --rpc-url $RPC_URL --broadcast
+[⠑] Compiling...
+[⠑] Compiling 1 files with Solc 0.8.20
+[⠃] Solc 0.8.20 finished in 2.92s
+Compiler run successful!
+Script ran successfully.
+
+== Logs ==
+  Voting Contract deployed at: 0xA2DeBc0969700F72702A7D4ADEAF48d4B26fe827
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 534351
+
+Estimated gas price: 0.0313601 gwei
+
+Estimated total gas used for script: 2645719
+
+Estimated amount required: 0.0000829700124119 ETH
+
+==========================
+
+##### scroll-sepolia
+✅  [Success] Hash: 0xc1f9bcf5879f3a9f90f3b8a8f6a1cbcb749373d22128daf51d5b5d7f2097bba0
+Contract Address: 0xA2DeBc0969700F72702A7D4ADEAF48d4B26fe827
+Block: 10455442
+Paid: 0.0000319116534369 ETH (2035169 gas * 0.0156801 gwei)
+
+✅ Sequence #1 on scroll-sepolia | Total Paid: 0.0000319116534369 ETH (2035169 gas * avg 0.0156801 gwei)
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /mnt/e/BlockChain/Blokkat/graduation-project/web3/broadcast/Voting.s.sol/534351/run-latest.json
+
+Sensitive values saved to: /mnt/e/BlockChain/Blokkat/graduation-project/web3/cache/Voting.s.sol/534351/run-latest.json
+
+amirelnagar@Amir:/mnt/e/BlockChain/Blokkat/graduation-project/web3$

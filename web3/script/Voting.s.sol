@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.20;
 
-import {Script, console} from "forge-std/Script.sol";
+import "forge-std/console.sol";
+import {Script} from "forge-std/Script.sol";
 import {Voting} from "../src/Voting.sol";
 
-contract CounterScript is Script {
-    Voting public voting;
-
-    function setUp() public {}
-
+contract DeployVoting is Script {
     function run() public {
-        vm.startBroadcast();
+        uint256 privateKey = vm.envUint("PRIVATE_KEY");
 
-        voting = new Voting(6, 2);
+        vm.startBroadcast(privateKey);
+
+        Voting voting = new Voting(10, 10);
+        console.log("Voting Contract deployed at:", address(voting));
 
         vm.stopBroadcast();
     }

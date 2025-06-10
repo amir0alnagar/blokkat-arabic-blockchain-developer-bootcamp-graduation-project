@@ -1,5 +1,5 @@
 const wagmiContractConfig = {
-  address: "0xc7d94c575A1D8bf9715cF0a624Ee3dC8eb99Ce76",
+  address: import.meta.env.VITE_CONTRACT_ADDRESS,
   abi: [
     {
       inputs: [
@@ -400,6 +400,7 @@ const wagmiContractConfig = {
       type: "function",
     },
   ],
+  chainId: 534351,
 };
 
 export default wagmiContractConfig;
